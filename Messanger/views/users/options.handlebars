@@ -1,0 +1,11 @@
+<h1>Options</h1>
+
+{{#if banned}}
+
+<h2>Remove bann</h2>
+	<h3><a href="/un-bann/{{this.userTwo}}">remove bann to {{this.userTwo}}</a> </h3>
+{{else}}
+<h2>Bann user</h2>
+ 	<h3><a href="/bann/{{this.userTwo}}">Bann {{this.userTwo}}</a> </h3>
+
+{{/if}}

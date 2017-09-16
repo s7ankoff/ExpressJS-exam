@@ -1,0 +1,41 @@
+h1 {
+  color: red
+}
+.container {
+  padding-left: 25%
+}
+.menu {
+  list-style-type: none;
+  padding-left: 0;
+}
+.menu li {
+  display: inline-block
+}
+.menu li:after {
+  content: "\00a0";
+}
+div{
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  margin-bottom: 10px;
+}
+.show-user{
+  display: flex;
+  direction: row;
+  text-align: center;
+}
+.show-user  input{
+  margin-left: 10px;
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* .threads{
+	float: left;
+}
+.thread-content{
+	float: right;
+	margin-right: 385px;
+} */
+

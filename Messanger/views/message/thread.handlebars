@@ -1,0 +1,76 @@
+
+
+
+<div class="thread-container">
+
+		{{#if message}}
+			<h3>{{message}}</h3>	
+		{{/if}}
+	 {{#if err}}
+ 			 <h1> {{this.err}}</h1> 
+	 {{/if}}
+	 <h3><a href="/options/{{this.userTwo}}">Options {{this.userTwo}}</a> </h3>
+  
+	
+
+	{{#if banned}}
+			<h1>banned</h1>
+			  	{{#each thread}} 
+ 				
+      <div>
+					<p>author:{{this.author.username}}  </p>
+					<p> message:  {{{this.msg}}}</p>
+						{{#if this.mine}}
+							<a href="/unlike/{{this._id}}">Unlike</a>
+
+							{{else}}
+							 	<a href="/like/{{this._id}}">Like</a>
+
+		 				{{/if}}
+      </div>
+  
+
+  	{{/each}}
+			{{else}}
+			 	{{#if thread}}
+  		
+   	{{#each thread}} 
+ 
+
+      <div>
+					<p>author:{{this.author.username}}  </p>
+      	  <p> message:  {{{this.msg}}}</p>
+						{{#if this.mine}}
+							<a href="/unlike/{{this._id}}">Unlike</a>
+
+							{{else}}
+						 	<a href="/like/{{this._id}}">Like</a>
+
+		 				{{/if}}
+      </div>
+  	
+
+  	{{/each}}
+	
+			<h1>Write message to :{{this.userTwo}}</h1>
+					<form action="/message/thread/sendTo/{{this.userTwo}}" method="POST">
+
+							<textarea name="content" id="" cols="50" rows="10"></textarea>
+
+							<input  type="submit" value="Send">
+					</form>
+	
+ 	 {{else}}
+	
+				<h1>Write message to :{{this.userTwo}}</h1>
+						<form action="/message/thread/sendTo/{{this.userTwo}}" method="POST">
+
+								<textarea name="content" id="" cols="50" rows="10"></textarea>
+
+								<input  type="submit" value="Send">
+						</form>
+
+ 		 {{/if}}
+	{{/if}}
+
+</div>

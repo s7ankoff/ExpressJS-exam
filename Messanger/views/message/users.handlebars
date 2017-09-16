@@ -1,0 +1,28 @@
+
+{{#if err}}
+  <h1> {{this.err}}</h1> 
+{{/if}}
+
+
+ {{!-- {{#if user}} 
+
+ {{#each user}}
+
+<h1> Chat with:{{this.username}} </h1>
+
+<form action="/message/thread/{{this.username}}" method="GET">
+<input type="submit" value="Show converstion">
+</form>
+
+
+<form action="/message/thread/user/{{this.username}}" method="POST">
+
+  <textarea name="content" id="" cols="50" rows="10"></textarea>
+
+  <input  type="submit" value="Send">
+</form>
+ {{/each}}
+ {{else}}
+
+<h1>No such user</h1>
+{{/if}} --}}
